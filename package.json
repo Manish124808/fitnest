@@ -1,0 +1,19 @@
+{
+  "name": "fitnest",
+  "version": "2.3.0",
+  "description": "FitNest - All-in-one Indian fitness tracker (MERN)",
+  "scripts": {
+    "build": "cd client && npm install && npm run build && cd ../server && npm install && cp -r ../client/dist public",
+    "start": "node server/server.js",
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:server": "cd server && npm run dev",
+    "dev:client": "cd client && npm run dev",
+    "seed": "cd server && npm run seed"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "engines": {
+    "node": "20.x"
+  }
+}
